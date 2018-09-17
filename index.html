@@ -10,16 +10,51 @@
 <body>
     <nav class="nav-container">
         <ul class="list-container">
-            <li class="list-item" onclick="location.href='second.html'">hello</li>
-            <li class="list-item">world</li>
-            <li class="list-item">i</li>
-            <li class="list-item">like</li>
-            <li class="list-item">daybreak</li>
+            <li class="list-item">home</li>
+            <li class="list-item">todo list</li>
+            <li class="list-item">carousel</li>
+            <li class="list-item">canvas</li>
+            <li class="list-item">echart three.js d3</li>
+            <li class="list-item" onclick="location.href='./lib/pages/introduce.html'">introduce</li>
         </ul>
     </nav>
-    <div class="container" style="width: 200px; background: seagreen">
-        <h1>hello world, this is my test.</h1>
+    <h1 class="title_cubic">click the cubics below</h1>
+    <div class="container" >
+       <div class="cubic_item"></div>
+       <div class="cubic_item"></div>
+       <div class="cubic_item"></div>
+       <div class="cubic_item"></div>
+       <div class="cubic_item"></div>
+       <div class="cubic_item"></div>
+       <div class="cubic_item"></div>
+       <div class="cubic_item"></div>
+       <div class="cubic_item"></div>
+       <div class="cubic_item"></div>
+       <div class="cubic_item"></div>
+       <div class="cubic_item"></div>
+       <div class="cubic_item"></div>
+       <div class="cubic_item"></div>
+       <div class="cubic_item"></div>
+       <div class="cubic_item"></div>
+       <div class="cubic_item"></div>
+       <div class="cubic_item"></div>
+       <div class="cubic_item"></div>
+       <div class="cubic_item"></div>
+       <div class="cubic_item"></div>
+       <div class="cubic_item"></div>
+       <div class="cubic_item"></div>
+       <div class="cubic_item"></div>
     </div>
+    <div id="vue_container">
+<div class="vue_content" v-for="(item,index) in language" :key="index">
+    <div class="carousel" v-show="index === current">{{item}}</div>
+</div>
+<div class="image_container" v-for="(item,index) in images" :key="index">
+<img class="image_1" v-bind:src="item" alt="error" v-show="index === active">
+</div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
     <script src="js/index.js"></script>
+    
 </body>
 </html>
